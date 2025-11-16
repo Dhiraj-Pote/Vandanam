@@ -2,19 +2,16 @@
 import { useState, useEffect } from "react";
 
 export default function Home() {
-  const [selectedVerse, setSelectedVerse] = useState<number | null>(null);
-  const [selectedTranslation, setSelectedTranslation] = useState<number | null>(null);
+  const [selected, setSelected] = useState<string | null>(null);
 
   useEffect(() => {
-    const handleClickOutside = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
-      if (!target.closest('.verse-text') && !target.closest('.translation-text')) {
-        setSelectedVerse(null);
-        setSelectedTranslation(null);
+    const handleClick = (e: MouseEvent) => {
+      if (!(e.target as HTMLElement).closest('[data-verse]')) {
+        setSelected(null);
       }
     };
-    document.addEventListener('click', handleClickOutside);
-    return () => document.removeEventListener('click', handleClickOutside);
+    document.addEventListener('click', handleClick);
+    return () => document.removeEventListener('click', handleClick);
   }, []);
 
   return (
@@ -22,66 +19,118 @@ export default function Home() {
       <section className="mb-4 text-center pt-2">
         <h1 className="text-4xl font-bold mb-2 text-[#5a3a1a]">Welcome to Vandanam</h1>
         <p className="text-sm text-[#6b4423] max-w-2xl mx-auto">
-          Offering prayers at the lotus feet of Kṛṣṇa whose another name is Uttamaśloka (who's offered prayers with best selected verses)
-        </p>
+          Offering prayers at the lotus feet of Kṛṣṇa whose another name is Uttamaśloka 
+          <br/>
+            (one who is offered prayers with best selected verses)
+          </p>
+        
       </section>
 
       <section id="mangalacaran" className="mb-24 bg-[#f3d4a5] rounded-lg p-10 shadow-lg text-center">
         <h1 className="text-3xl font-bold mb-12 text-[#5a3a1a]">MangalaCharan Prayers</h1>
         <div className="space-y-12">
           <div>
-            <p 
-              onClick={() => { setSelectedVerse(selectedVerse === 1 ? null : 1); setSelectedTranslation(null); }}
-              className={`verse-text italic text-xl text-[#6b4423] mb-6 inline-block text-left transition-all duration-200 relative ${selectedVerse === 1 ? 'before:content-[""] before:absolute before:left-[-200px] before:top-0 before:bottom-0 before:w-1 before:bg-[#da9d5b]' : ''}`}
-            >
+            <p data-verse onClick={() => setSelected(selected === 'v1' ? null : 'v1')} className={`italic text-xl text-[#6b4423] mb-6 pl-4 ${selected === 'v1' ? 'border-l-4 border-[#da9d5b] -ml-1' : ''}`}>
               oṁ ajñāna-timirāndhasya<br/>
               jñānāñjana-śalākayā<br/>
               cakṣur unmīlitaṁ yena<br/>
               tasmai śrī-gurave namaḥ
             </p>
-            <p 
-              onClick={() => { setSelectedTranslation(selectedTranslation === 1 ? null : 1); setSelectedVerse(null); }}
-              className={`translation-text text-[#5a3a1a] max-w-3xl mx-auto transition-all duration-200 pl-4 ${selectedTranslation === 1 ? 'border-l-4 border-[#da9d5b]' : 'border-l-4 border-transparent'}`}
-            >
-              I offer my respectful obeisances unto my spiritual master, who has opened my eyes, 
-              which were blinded by the darkness of ignorance, with the torchlight of knowledge.
+            <p data-verse onClick={() => setSelected(selected === 't1' ? null : 't1')} className={`text-[#5a3a1a] max-w-3xl mx-auto relative ${selected === 't1' ? 'before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:bg-[#da9d5b]' : ''}`}>
+              I was born in the darkest ignorance, and my spiritual master opened my eyes with the torch of knowledge. I offer my respectful obeisances unto him.
             </p>
           </div>
           
           <div>
-            <p 
-              onClick={() => { setSelectedVerse(selectedVerse === 2 ? null : 2); setSelectedTranslation(null); }}
-              className={`verse-text italic text-xl text-[#6b4423] mb-6 inline-block text-left transition-all duration-200 relative ${selectedVerse === 2 ? 'before:content-[""] before:absolute before:left-[-200px] before:top-0 before:bottom-0 before:w-1 before:bg-[#da9d5b]' : ''}`}
-            >
-              namo mahā-vadānyāya<br/>
-              kṛṣṇa-prema-pradāya te<br/>
-              kṛṣṇāya kṛṣṇa-caitanya-<br/>
-              nāmne gaura-tviṣe namaḥ
+            <p data-verse onClick={() => setSelected(selected === 'v2' ? null : 'v2')} className={`italic text-xl text-[#6b4423] mb-6 pl-4 ${selected === 'v2' ? 'border-l-4 border-[#da9d5b] -ml-1' : ''}`}>
+              śrī-caitanya-mano-'bhīṣṭaṁ<br/>
+              sthāpitaṁ yena bhū-tale<br/>
+              svayaṁ rūpaḥ kadā mahyaṁ<br/>
+              dadāti sva-padāntikam
             </p>
-            <p 
-              onClick={() => { setSelectedTranslation(selectedTranslation === 2 ? null : 2); setSelectedVerse(null); }}
-              className={`translation-text text-[#5a3a1a] max-w-3xl mx-auto transition-all duration-200 pl-4 ${selectedTranslation === 2 ? 'border-l-4 border-[#da9d5b]' : 'border-l-4 border-transparent'}`}
-            >
-              O most munificent incarnation! You are Kṛṣṇa Himself appearing as Śrī Kṛṣṇa Caitanya Mahāprabhu. 
-              You have assumed the golden color of Śrīmatī Rādhārāṇī, and You are widely distributing pure love of Kṛṣṇa. 
-              We offer our respectful obeisances unto You.
+            <p data-verse onClick={() => setSelected(selected === 't2' ? null : 't2')} className={`text-[#5a3a1a] max-w-3xl mx-auto relative ${selected === 't2' ? 'before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:bg-[#da9d5b]' : ''}`}>
+              When will Śrīla Rūpa Gosvāmī Prabhupāda, who has established within this material world the mission to fulfill the desire of Lord Caitanya, give me shelter under his lotus feet?
             </p>
           </div>
 
           <div>
-            <p 
-              onClick={() => { setSelectedVerse(selectedVerse === 3 ? null : 3); setSelectedTranslation(null); }}
-              className={`verse-text italic text-xl text-[#6b4423] mb-6 inline-block text-left transition-all duration-200 relative ${selectedVerse === 3 ? 'before:content-[""] before:absolute before:left-[-200px] before:top-0 before:bottom-0 before:w-1 before:bg-[#da9d5b]' : ''}`}
-            >
+            <p data-verse onClick={() => setSelected(selected === 'v3' ? null : 'v3')} className={`italic text-xl text-[#6b4423] mb-6 pl-4 ${selected === 'v3' ? 'border-l-4 border-[#da9d5b] -ml-1' : ''}`}>
+              vande 'haṁ śrī-guroḥ śrī-yuta-pada-<br/>
+              kamalaṁ śrī-gurūn vaiṣṇavāṁś ca<br/>
+              śrī-rūpaṁ sāgrajātaṁ saha-gaṇa-<br/>
+              raghunāthānvitaṁ taṁ sa-jīvam<br/>
+              sādvaitaṁ sāvadhūtaṁ parijana-<br/>
+              sahitaṁ kṛṣṇa-caitanya-devaṁ<br/>
+              śrī-rādhā-kṛṣṇa-pādān saha-gaṇa-<br/>
+              lalitā-śrī-viśākhānvitāṁś ca
+            </p>
+            <p data-verse onClick={() => setSelected(selected === 't3' ? null : 't3')} className={`text-[#5a3a1a] max-w-3xl mx-auto relative ${selected === 't3' ? 'before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:bg-[#da9d5b]' : ''}`}>
+              I offer my respectful obeisances unto the lotus feet of my spiritual master and unto the feet of all Vaiṣṇavas. I offer my respectful obeisances unto the lotus feet of Śrīla Rūpa Gosvāmī along with his elder brother Sanātana Gosvāmī, as well as Raghunātha Dāsa and Raghunātha Bhaṭṭa, Gopāla Bhaṭṭa and Śrīla Jīva Gosvāmī. I offer my respectful obeisances to Lord Kṛṣṇa Caitanya and Lord Nityānanda along with Advaita Ācārya, Gadādhara, Śrīvāsa and other associates. I offer my respectful obeisances to Śrīmatī Rādhārāṇī and Śrī Kṛṣṇa along with Their associates Śrī Lalitā and Viśākhā.
+            </p>
+          </div>
+
+          <div>
+            <p data-verse onClick={() => setSelected(selected === 'v4' ? null : 'v4')} className={`italic text-xl text-[#6b4423] mb-6 pl-4 ${selected === 'v4' ? 'border-l-4 border-[#da9d5b] -ml-1' : ''}`}>
+              he kṛṣṇa karuṇā-sindho<br/>
+              dīna-bandho jagat-pate<br/>
+              gopeśa gopikā-kānta<br/>
+              rādhā-kānta namo 'stu te
+            </p>
+            <p data-verse onClick={() => setSelected(selected === 't4' ? null : 't4')} className={`text-[#5a3a1a] max-w-3xl mx-auto relative ${selected === 't4' ? 'before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:bg-[#da9d5b]' : ''}`}>
+              O my dear Kṛṣṇa, You are the friend of the distressed and the source of creation. You are the master of the gopīs and the lover of Rādhārāṇī. I offer my respectful obeisances unto You.
+            </p>
+          </div>
+
+          <div>
+            <p data-verse onClick={() => setSelected(selected === 'v5' ? null : 'v5')} className={`italic text-xl text-[#6b4423] mb-6 pl-4 ${selected === 'v5' ? 'border-l-4 border-[#da9d5b] -ml-1' : ''}`}>
+              tapta-kāñcana-gaurāṅgi<br/>
+              rādhe vṛndāvaneśvari<br/>
+              vṛṣabhānu-sute devi<br/>
+              praṇamāmi hari-priye
+            </p>
+            <p data-verse onClick={() => setSelected(selected === 't5' ? null : 't5')} className={`text-[#5a3a1a] max-w-3xl mx-auto relative ${selected === 't5' ? 'before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:bg-[#da9d5b]' : ''}`}>
+              I offer my respects to Rādhārāṇī, whose bodily complexion is like molten gold and who is the Queen of Vṛndāvana. You are the daughter of King Vṛṣabhānu, and You are very dear to Lord Kṛṣṇa.
+            </p>
+          </div>
+
+          <div>
+            <p data-verse onClick={() => setSelected(selected === 'v6' ? null : 'v6')} className={`italic text-xl text-[#6b4423] mb-6 pl-4 ${selected === 'v6' ? 'border-l-4 border-[#da9d5b] -ml-1' : ''}`}>
+              vāñchā-kalpa-tarubhyaś ca<br/>
+              kṛpā-sindhubhya eva ca<br/>
+              patitānāṁ pāvanebhyo<br/>
+              vaiṣṇavebhyo namo namaḥ
+            </p>
+            <p data-verse onClick={() => setSelected(selected === 't6' ? null : 't6')} className={`text-[#5a3a1a] max-w-3xl mx-auto relative ${selected === 't6' ? 'before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:bg-[#da9d5b]' : ''}`}>
+              I offer my respectful obeisances unto all the Vaiṣṇava devotees of the Lord. They can fulfill the desires of everyone, just like desire trees, and they are full of compassion for the fallen souls.
+            </p>
+          </div>
+
+          <div>
+            <p data-verse onClick={() => setSelected(selected === 'v7' ? null : 'v7')} className={`italic text-xl text-[#6b4423] mb-6 pl-4 ${selected === 'v7' ? 'border-l-4 border-[#da9d5b] -ml-1' : ''}`}>
+              nama oṁ viṣṇu-pādāya kṛṣṇa-preṣṭhāya bhū-tale<br/>
+              śrīmate bhaktivedānta-svāmin iti nāmine<br/>
+              namas te sārasvate deve gaura-vāṇī-pracāriṇe<br/>
+              nirviśeṣa-śūnyavādī-pāścātya-deśa-tāriṇe
+            </p>
+            <p data-verse onClick={() => setSelected(selected === 't7' ? null : 't7')} className={`text-[#5a3a1a] max-w-3xl mx-auto relative ${selected === 't7' ? 'before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:bg-[#da9d5b]' : ''}`}>
+              I offer my respectful obeisances unto His Divine Grace A. C. Bhaktivedanta Swami Prabhupada, who is very dear to Lord Krishna, having taken shelter at His lotus feet. Our respectful obeisances are unto you, O spiritual master, servant of Bhaktisiddhanta Saraswati Goswami. You are kindly preaching the message of Lord Chaitanyadeva and delivering the Western countries, which are filled with impersonalism and voidism.
+            </p>
+          </div>
+
+          <div>
+            <p data-verse onClick={() => setSelected(selected === 'v8' ? null : 'v8')} className={`italic text-xl text-[#6b4423] mb-6 pl-4 ${selected === 'v8' ? 'border-l-4 border-[#da9d5b] -ml-1' : ''}`}>
               śrī-kṛṣṇa-caitanya prabhu-nityānanda<br/>
               śrī-advaita gadādhara śrīvāsādi-gaura-bhakta-vṛnda
             </p>
-            <p 
-              onClick={() => { setSelectedTranslation(selectedTranslation === 3 ? null : 3); setSelectedVerse(null); }}
-              className={`translation-text text-[#5a3a1a] max-w-3xl mx-auto transition-all duration-200 pl-4 ${selectedTranslation === 3 ? 'border-l-4 border-[#da9d5b]' : 'border-l-4 border-transparent'}`}
-            >
-              I offer my obeisances to Śrī Kṛṣṇa Caitanya, Prabhu Nityānanda, Śrī Advaita, 
-              Gadādhara, Śrīvāsa and all the devotees of Lord Caitanya.
+            <p data-verse onClick={() => setSelected(selected === 't8' ? null : 't8')} className={`text-[#5a3a1a] max-w-3xl mx-auto relative ${selected === 't8' ? 'before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:bg-[#da9d5b]' : ''}`}>
+              I offer my obeisances to Śrī Kṛṣṇa Caitanya, Prabhu Nityānanda, Śrī Advaita, Gadādhara, Śrīvāsa and all others in the line of devotion.
+            </p>
+          </div>
+
+          <div>
+            <p className="italic text-2xl text-[#6b4423] mt-16">
+              hare kṛṣṇa hare kṛṣṇa kṛṣṇa kṛṣṇa hare hare<br/>
+              hare rāma hare rāma rāma rāma hare hare
             </p>
           </div>
         </div>
@@ -91,32 +140,20 @@ export default function Home() {
         <h1 className="text-3xl font-bold mb-12 text-[#5a3a1a]">Prayers to Recite Bhāgavatam</h1>
         <div className="space-y-12">
           <div>
-            <p 
-              onClick={() => { setSelectedVerse(selectedVerse === 4 ? null : 4); setSelectedTranslation(null); }}
-              className={`verse-text italic text-xl text-[#6b4423] mb-6 inline-block text-left transition-all duration-200 relative ${selectedVerse === 4 ? 'before:content-[""] before:absolute before:left-[-200px] before:top-0 before:bottom-0 before:w-1 before:bg-[#da9d5b]' : ''}`}
-            >
+            <p data-verse onClick={() => setSelected(selected === 'v4' ? null : 'v4')} className={`italic text-xl text-[#6b4423] mb-6 pl-4 ${selected === 'v4' ? 'border-l-4 border-[#da9d5b] -ml-1' : ''}`}>
               oṁ namo bhagavate vāsudevāya
             </p>
-            <p 
-              onClick={() => { setSelectedTranslation(selectedTranslation === 4 ? null : 4); setSelectedVerse(null); }}
-              className={`translation-text text-[#5a3a1a] max-w-3xl mx-auto transition-all duration-200 pl-4 ${selectedTranslation === 4 ? 'border-l-4 border-[#da9d5b]' : 'border-l-4 border-transparent'}`}
-            >
+            <p data-verse onClick={() => setSelected(selected === 't4' ? null : 't4')} className={`text-[#5a3a1a] max-w-3xl mx-auto relative ${selected === 't4' ? 'before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:bg-[#da9d5b]' : ''}`}>
              I offer my respectful obeisances unto Lord Vāsudeva, the Supreme Personality of Godhead.
             </p>
           </div>
 
           <div>
-            <p 
-              onClick={() => { setSelectedVerse(selectedVerse === 5 ? null : 5); setSelectedTranslation(null); }}
-              className={`verse-text italic text-xl text-[#6b4423] mb-6 inline-block text-left transition-all duration-200 relative ${selectedVerse === 5 ? 'before:content-[""] before:absolute before:left-[-200px] before:top-0 before:bottom-0 before:w-1 before:bg-[#da9d5b]' : ''}`}
-            >
+            <p data-verse onClick={() => setSelected(selected === 'v5' ? null : 'v5')} className={`italic text-xl text-[#6b4423] mb-6 pl-4 ${selected === 'v5' ? 'border-l-4 border-[#da9d5b] -ml-1' : ''}`}>
               vyāsāya viṣṇu-rūpāya vyāsa-rūpāya viṣṇave<br/>
               namo vai brahma-nidhaye vāsiṣṭhāya namo namaḥ
             </p>
-            <p 
-              onClick={() => { setSelectedTranslation(selectedTranslation === 5 ? null : 5); setSelectedVerse(null); }}
-              className={`translation-text text-[#5a3a1a] max-w-3xl mx-auto transition-all duration-200 pl-4 ${selectedTranslation === 5 ? 'border-l-4 border-[#da9d5b]' : 'border-l-4 border-transparent'}`}
-            >
+            <p data-verse onClick={() => setSelected(selected === 't5' ? null : 't5')} className={`text-[#5a3a1a] max-w-3xl mx-auto relative ${selected === 't5' ? 'before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:bg-[#da9d5b]' : ''}`}>
               I offer my respectful obeisances unto Śrīla Vyāsadeva, who is a form of Lord Viṣṇu, 
               and unto Lord Viṣṇu, who appears in the form of Vyāsadeva. I offer my obeisances 
               unto the great sage who is the treasure house of all Vedic knowledge.
@@ -124,19 +161,13 @@ export default function Home() {
           </div>
 
           <div>
-            <p 
-              onClick={() => { setSelectedVerse(selectedVerse === 6 ? null : 6); setSelectedTranslation(null); }}
-              className={`verse-text italic text-xl text-[#6b4423] mb-6 inline-block text-left transition-all duration-200 relative ${selectedVerse === 6 ? 'before:content-[""] before:absolute before:left-[-200px] before:top-0 before:bottom-0 before:w-1 before:bg-[#da9d5b]' : ''}`}
-            >
+            <p data-verse onClick={() => setSelected(selected === 'v6' ? null : 'v6')} className={`italic text-xl text-[#6b4423] mb-6 pl-4 ${selected === 'v6' ? 'border-l-4 border-[#da9d5b] -ml-1' : ''}`}>
               śrīmad-bhāgavataṁ purāṇam amalaṁ yad vaiṣṇavānāṁ priyaṁ<br/>
               yasmin pāramahaṁsyam ekam amalaṁ jñānaṁ paraṁ gīyate<br/>
               tatra jñāna-virāga-bhakti-sahitaṁ naiṣkarmyam āviskṛtaṁ<br/>
               tac chṛṇvan su-paṭhan vicāraṇa-paro bhaktyā vimucyen naraḥ
             </p>
-            <p 
-              onClick={() => { setSelectedTranslation(selectedTranslation === 6 ? null : 6); setSelectedVerse(null); }}
-              className={`translation-text text-[#5a3a1a] max-w-3xl mx-auto transition-all duration-200 pl-4 ${selectedTranslation === 6 ? 'border-l-4 border-[#da9d5b]' : 'border-l-4 border-transparent'}`}
-            >
+            <p data-verse onClick={() => setSelected(selected === 't6' ? null : 't6')} className={`text-[#5a3a1a] max-w-3xl mx-auto relative ${selected === 't6' ? 'before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:bg-[#da9d5b]' : ''}`}>
               Śrīmad-Bhāgavatam is the spotless Purāṇa. It is most dear to the Vaiṣṇavas because it describes 
               the pure and supreme knowledge of the paramahaṁsas. This Bhāgavatam reveals the means for becoming 
               free from all material work, together with the processes of transcendental knowledge, renunciation 
@@ -153,19 +184,13 @@ export default function Home() {
         
         <div className="space-y-12">
           <div>
-            <p 
-              onClick={() => { setSelectedVerse(selectedVerse === 7 ? null : 7); setSelectedTranslation(null); }}
-              className={`verse-text italic text-xl text-[#6b4423] mb-6 inline-block text-left transition-all duration-200 relative ${selectedVerse === 7 ? 'before:content-[""] before:absolute before:left-[-200px] before:top-0 before:bottom-0 before:w-1 before:bg-[#da9d5b]' : ''}`}
-            >
+            <p data-verse onClick={() => setSelected(selected === 'v7' ? null : 'v7')} className={`italic text-xl text-[#6b4423] mb-6 pl-4 ${selected === 'v7' ? 'border-l-4 border-[#da9d5b] -ml-1' : ''}`}>
               ceto-darpaṇa-mārjanaṁ bhava-mahā-dāvāgni-nirvāpaṇaṁ<br/>
               śreyaḥ-kairava-candrikā-vitaraṇaṁ vidyā-vadhū-jīvanam<br/>
               ānandāmbudhi-vardhanaṁ prati-padaṁ pūrṇāmṛtāsvādanaṁ<br/>
               sarvātma-snapanaṁ paraṁ vijayate śrī-kṛṣṇa-saṅkīrtanam
             </p>
-            <p 
-              onClick={() => { setSelectedTranslation(selectedTranslation === 7 ? null : 7); setSelectedVerse(null); }}
-              className={`translation-text text-[#5a3a1a] max-w-3xl mx-auto transition-all duration-200 pl-4 ${selectedTranslation === 7 ? 'border-l-4 border-[#da9d5b]' : 'border-l-4 border-transparent'}`}
-            >
+            <p data-verse onClick={() => setSelected(selected === 't7' ? null : 't7')} className={`text-[#5a3a1a] max-w-3xl mx-auto relative ${selected === 't7' ? 'before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:bg-[#da9d5b]' : ''}`}>
               Glory to the śrī-kṛṣṇa-saṅkīrtana, which cleanses the heart of all the dust accumulated for years 
               and extinguishes the fire of conditional life, of repeated birth and death. This saṅkīrtana movement 
               is the prime benediction for humanity at large because it spreads the rays of the benediction moon. 
@@ -175,19 +200,13 @@ export default function Home() {
           </div>
 
           <div>
-            <p 
-              onClick={() => { setSelectedVerse(selectedVerse === 8 ? null : 8); setSelectedTranslation(null); }}
-              className={`verse-text italic text-xl text-[#6b4423] mb-6 inline-block text-left transition-all duration-200 relative ${selectedVerse === 8 ? 'before:content-[""] before:absolute before:left-[-200px] before:top-0 before:bottom-0 before:w-1 before:bg-[#da9d5b]' : ''}`}
-            >
+            <p data-verse onClick={() => setSelected(selected === 'v8' ? null : 'v8')} className={`italic text-xl text-[#6b4423] mb-6 pl-4 ${selected === 'v8' ? 'border-l-4 border-[#da9d5b] -ml-1' : ''}`}>
               tṛṇād api sunīcena<br/>
               taror api sahiṣṇunā<br/>
               amāninā mānadena<br/>
               kīrtanīyaḥ sadā hariḥ
             </p>
-            <p 
-              onClick={() => { setSelectedTranslation(selectedTranslation === 8 ? null : 8); setSelectedVerse(null); }}
-              className={`translation-text text-[#5a3a1a] max-w-3xl mx-auto transition-all duration-200 pl-4 ${selectedTranslation === 8 ? 'border-l-4 border-[#da9d5b]' : 'border-l-4 border-transparent'}`}
-            >
+            <p data-verse onClick={() => setSelected(selected === 't8' ? null : 't8')} className={`text-[#5a3a1a] max-w-3xl mx-auto relative ${selected === 't8' ? 'before:absolute before:left-0 before:top-0 before:bottom-0 before:w-1 before:bg-[#da9d5b]' : ''}`}>
               One should chant the holy name of the Lord in a humble state of mind, thinking oneself lower 
               than the straw in the street; one should be more tolerant than a tree, devoid of all sense 
               of false prestige, and should be ready to offer all respect to others. In such a state of 

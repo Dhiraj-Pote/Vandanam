@@ -30,14 +30,9 @@ npm run dev
 npm run build
 ```
 
-4. Export static files:
-```bash
-npm run export
-```
-
 ## Deployment
 
-Deploy the `out/` folder to Netlify after running `npm run export`.
+Deploy the `out/` folder to Netlify after running `npm run build`.
 
 ## Tech Stack
 
