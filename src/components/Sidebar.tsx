@@ -1,9 +1,9 @@
 "use client";
 
 const menuItems = [
-  { id: 'mangalacaran', label: 'MangalaCharan' },
-  { id: 'bhagavatam', label: 'Bhagavatam' },
-  { id: 'siksastakam', label: 'Śikṣāṣṭakam' },
+  { id: 'mangalacaran', label: 'MangalaCharan Prayers' },
+  { id: 'bhagavatam', label: 'Glorification of Bhagavatam' },
+  { id: 'siksastakam', label: 'śrī Śikṣāṣṭakam' },
   { id: 'offenses', label: '10 Offenses' }
 ];
 
