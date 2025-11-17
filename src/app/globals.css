@@ -13,3 +13,11 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+.small-gap {
+    /* Make the line break behave like a block element so margin can be applied */
+    display: block; 
+    /* Add a custom vertical space (e.g., 8px) below the line break. 
+       Adjust '8px' to fine-tune the size. */
+    margin-bottom: 8px; 
+}

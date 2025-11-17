@@ -323,9 +323,9 @@ export default function Home() {
           <div>
             <p
               data-verse
-              onClick={() => setSelected(selected === "v4" ? null : "v4")}
+              onClick={() => setSelected(selected === "v11" ? null : "v11")}
               className={`text-2xl text-black mb-6 pl-4 ${
-                selected === "v4" ? "border-l-4 border-[#da9d5b] -ml-1" : ""
+                selected === "v11" ? "border-l-4 border-[#da9d5b] -ml-1" : ""
               }`}
             >
               <b>oṁ namo bhagavate vāsudevāya </b>
@@ -476,7 +476,9 @@ export default function Home() {
               className={`text-2xl text-black mb-6 pl-4 ${
                 selected === "s1" ? "border-l-4 border-[#da9d5b] -ml-1" : ""
               }`}
-            >(1)<br/>
+            >
+              (1)
+              <br />
               ceto-darpaṇa-mārjanam bhava-mahā-dāvāgni-nirvāpaṇam
               <br />
               śreyaḥ-kairava-candrikā-vitaraṇam vidyā-vadhū-jīvanam
@@ -514,7 +516,9 @@ export default function Home() {
               className={`text-2xl text-black mb-6 pl-4 ${
                 selected === "s2" ? "border-l-4 border-[#da9d5b] -ml-1" : ""
               }`}
-            >(2)<br/>
+            >
+              (2)
+              <br />
               nāmnām akāri bahudhā nija-sarva-śaktis
               <br />
               tatrārpitā niyamitaḥ smaraṇe na kālaḥ
@@ -552,7 +556,9 @@ export default function Home() {
               className={`text-2xl text-black mb-6 pl-4 ${
                 selected === "s3" ? "border-l-4 border-[#da9d5b] -ml-1" : ""
               }`}
-            >(3)<br/>
+            >
+              (3)
+              <br />
               tṛṇād api sunīcena
               <br />
               taror api sahiṣṇunā
@@ -588,7 +594,9 @@ export default function Home() {
               className={`text-2xl text-black mb-6 pl-4 ${
                 selected === "s4" ? "border-l-4 border-[#da9d5b] -ml-1" : ""
               }`}
-            >(4)<br/>
+            >
+              (4)
+              <br />
               na dhanaṁ na janaṁ na sundarīṁ
               <br />
               kavitāṁ vā jagad-īśa kāmaye
@@ -621,7 +629,9 @@ export default function Home() {
               className={`text-2xl text-black mb-6 pl-4 ${
                 selected === "s5" ? "border-l-4 border-[#da9d5b] -ml-1" : ""
               }`}
-            >(5)<br/>
+            >
+              (5)
+              <br />
               ayi nanda-tanuja kiṅkaraṁ
               <br />
               patitaṁ māṁ viṣame bhavāmbudhau
@@ -655,7 +665,9 @@ export default function Home() {
               className={`text-2xl text-black mb-6 pl-4 ${
                 selected === "s6" ? "border-l-4 border-[#da9d5b] -ml-1" : ""
               }`}
-            >(6)<br/>
+            >
+              (6)
+              <br />
               nayanaṁ galad-aśru-dhārayā
               <br />
               vadanaṁ gadgada-ruddhayā girā
@@ -689,7 +701,9 @@ export default function Home() {
               className={`text-2xl text-black mb-6 pl-4 ${
                 selected === "s7" ? "border-l-4 border-[#da9d5b] -ml-1" : ""
               }`}
-            >(7)<br/>
+            >
+              (7)
+              <br />
               yugāyitaṁ nimeṣeṇa
               <br />
               cakṣuṣā prāvṛṣāyitam
@@ -723,12 +737,14 @@ export default function Home() {
               className={`text-2xl text-black mb-6 pl-4 ${
                 selected === "s8" ? "border-l-4 border-[#da9d5b] -ml-1" : ""
               }`}
-            >(8)<br/>
-            āśliṣya vā pāda-ratāṁ pinaṣṭu mām
+            >
+              (8)
               <br />
-        adarśanān marma-hatāṁ karotu vā
+              āśliṣya vā pāda-ratāṁ pinaṣṭu mām
               <br />
-          yathā tathā vā vidadhātu lampaṭo
+              adarśanān marma-hatāṁ karotu vā
+              <br />
+              yathā tathā vā vidadhātu lampaṭo
               <br />
               mat-prāṇa-nāthas tu sa eva nāparaḥ
             </p>
@@ -764,116 +780,119 @@ export default function Home() {
           Nāmāparādha - Offenses to be avoided while chanting the holy names
         </p>
 
+        <p
+          data-verse
+          onClick={() => setSelected(selected === "v11" ? null : "v11")}
+          className={`text-2xl text-black mb-6 pl-4 ${
+            selected === "v11" ? "border-l-4 border-[#da9d5b] -ml-1" : ""
+          }`}
+        >
+          
+          <b>
+    bahu janma kare yadi śravaṇa, kīrtana
+    <br/>
+    tabu ta’ nā pāya kṛṣṇa-pade prema-dhana
+  </b> 
+  {/* Dedicated invisible spacer span */}
+  <span className="small-gap" /> 
+
+  If one is infested with the ten offenses in the chanting of the Hare Kṛṣṇa mahā-mantra, despite his endeavor to chant the holy name for many births, he will not get the love of Godhead that is the ultimate goal of this chanting.
+</p><br/>
+
+
+
+<b> <p
+          data-verse
+          onClick={() => setSelected(selected === "v11" ? null : "v11")}
+          className={`text-2xl text-[#0b0000] mb-6 pl-4 ${
+            selected === "v11" ? "border-l-4 border-[#da9d5b] -ml-1" : ""
+          }`}
+        >         
+          
+    -:The ten offenses against the chanting of the holy name are as follows:-
+   </p><br/></b>
+
         <div className="space-y-8 max-w-3xl mx-auto">
+          
+            <h2 className="text-xl font-semibold mb-3 text-[#6b4423]">
+              1. To blaspheme the devotees who have dedicated their lives
+              for propagating the holy name of the Lord.
+            </h2>
+           
+          
+
           <div>
             <h2 className="text-xl font-semibold mb-3 text-[#6b4423]">
-              1. Blaspheming devotees
+              2.To consider the names of demigods like Lord Śiva or Lord Brahmā to
+              be equal to or independent of the name of Lord Viṣṇu.
             </h2>
-            <p className="text-[#5a3a1a]">
-              To criticize or blaspheme devotees who have dedicated their lives
-              to propagating the holy name of the Lord.
-            </p>
+            
           </div>
 
           <div>
             <h2 className="text-xl font-semibold mb-3 text-[#6b4423]">
-              2. Considering demigods equal to the Supreme Lord
+              3.  To disobey the orders of the spiritual master.
             </h2>
-            <p className="text-[#5a3a1a]">
-              To consider the names of demigods like Lord Śiva or Lord Brahmā to
-              be equal to, or independent of, the name of Lord Viṣṇu.
-            </p>
+          
           </div>
 
           <div>
             <h2 className="text-xl font-semibold mb-3 text-[#6b4423]">
-              3. Disobeying the spiritual master
-            </h2>
-            <p className="text-[#5a3a1a]">
-              To disobey the orders of the spiritual master who is engaged in
-              distributing the holy name.
-            </p>
-          </div>
-
-          <div>
-            <h2 className="text-xl font-semibold mb-3 text-[#6b4423]">
-              4. Blaspheming Vedic literature
-            </h2>
-            <p className="text-[#5a3a1a]">
-              To blaspheme the Vedic literature or literature in pursuance of
+              4. To blaspheme the Vedic literature or literature in pursuance of
               the Vedic version.
-            </p>
+            </h2>
+            
           </div>
 
           <div>
             <h2 className="text-xl font-semibold mb-3 text-[#6b4423]">
-              5. Considering the holy name imagination
+              5. To consider the glories of chanting Hare Kṛṣṇa to be an imagination.
             </h2>
-            <p className="text-[#5a3a1a]">
-              To consider the glories of chanting Hare Kṛṣṇa to be imaginary or
-              exaggerated.
-            </p>
+            
           </div>
 
           <div>
             <h2 className="text-xl font-semibold mb-3 text-[#6b4423]">
-              6. Giving some interpretation on the holy name
+              6. Giving some interpretation to the holy name of the lord.
             </h2>
-            <p className="text-[#5a3a1a]">
-              To give some interpretation on the holy names of the Lord based on
-              mundane scholarship.
-            </p>
+            
           </div>
 
           <div>
             <h2 className="text-xl font-semibold mb-3 text-[#6b4423]">
               7. Committing sinful activities on the strength of chanting
             </h2>
-            <p className="text-[#5a3a1a]">
-              To commit sinful activities on the strength of the holy name of
-              the Lord, thinking that since one is chanting the holy name,
-              sinful activities will be nullified.
-            </p>
+            
           </div>
 
           <div>
             <h2 className="text-xl font-semibold mb-3 text-[#6b4423]">
-              8. Considering chanting equal to pious activities
-            </h2>
-            <p className="text-[#5a3a1a]">
-              To consider the chanting of Hare Kṛṣṇa to be one of the auspicious
+              8.  To consider the chanting of Hare Kṛṣṇa to be one of the auspicious
               ritualistic activities offered in the Vedas as fruitive activities
               (karma-kāṇḍa).
-            </p>
+            </h2>
+            
           </div>
 
           <div>
             <h2 className="text-xl font-semibold mb-3 text-[#6b4423]">
-              9. Instructing faithless persons
+              9.  To instruct a faithless person about the glories of the holy name.
             </h2>
-            <p className="text-[#5a3a1a]">
-              To instruct a faithless person about the glories of the holy name.
-              Such instructions should not be given to the faithless.
-            </p>
+            
           </div>
 
           <div>
             <h2 className="text-xl font-semibold mb-3 text-[#6b4423]">
-              10. Not having complete faith in chanting
-            </h2>
-            <p className="text-[#5a3a1a]">
-              To not have complete faith in the chanting of the holy names and
+              10. To not have complete faith in the chanting of the holy names and
               to maintain material attachments, even after understanding so many
               instructions on this matter.
-            </p>
+            </h2>
+            
           </div>
 
           <div className="mt-12 p-6 bg-[#f5dcc4]/60 border border-[#d4a574] rounded-lg">
-            <p className="text-sm italic text-[#5a3a1a]">
-              These ten offenses should be carefully avoided by anyone who
-              wishes to make spiritual advancement through the chanting of the
-              holy names. By avoiding these offenses, one can chant purely and
-              achieve the ultimate goal of life.
+            <p className="text-2xl italic text-[#5a3a1a]">
+              Every devotee who claims to be Vaishnava must guard against these offenses in order to quickly achieve the desired success <b>KRISHNA PREMA!!!</b>
             </p>
           </div>
         </div>
