@@ -20,10 +20,9 @@ export default function Home() {
         <h1 className="text-4xl font-bold mb-2 text-[#5a3a1a]">
           Welcome to Vandanam
         </h1>
-        <p className="text-sm text-[#6b4423] max-w-2xl mx-auto">
+        <p className="text-sm text-[#6b4423] max-w-4xl mx-auto mb-8 animate-fade-in">
           Offering prayers at the lotus feet of Kṛṣṇa, whose another name
-          <br /> is Uttamaśloka- (one who is glorified with best selected
-          verses)
+          is Uttamaśloka- (one who is glorified with best selected verses)
         </p>
       </section>
 
@@ -886,6 +885,7 @@ export default function Home() {
               10. To not have complete faith in the chanting of the holy names and
               to maintain material attachments, even after understanding so many
               instructions on this matter.
+              <p>It is also an offense to be inattentive while chanting.</p>
             </h2>
             
           </div>
