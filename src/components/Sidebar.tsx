@@ -3,7 +3,7 @@
 const menuItems = [
   { id: 'mangalacaran', label: 'MangalaCharan Prayers' },
   { id: 'bhagavatam', label: 'Glorification of Bhagavatam' },
-  { id: 'siksastakam', label: 'Śrī Śikṣāṣṭakam' },
+  { id: 'siksastakam', label: 'Śikṣāṣṭakam' },
   { id: 'offenses', label: '10 Offenses' }
 ];
 
