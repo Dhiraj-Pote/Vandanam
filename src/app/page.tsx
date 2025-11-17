@@ -802,92 +802,134 @@ export default function Home() {
 
 <b> <p
           data-verse
-          onClick={() => setSelected(selected === "v11" ? null : "v11")}
+          onClick={() => setSelected(selected === "v12" ? null : "v12")}
           className={`text-2xl text-[#0b0000] mb-6 pl-4 ${
-            selected === "v11" ? "border-l-4 border-[#da9d5b] -ml-1" : ""
+            selected === "v12" ? "border-l-4 border-[#da9d5b] -ml-1" : ""
           }`}
         >         
           
     -:The ten offenses against the chanting of the holy name are as follows:-
    </p><br/></b>
 
-        <div className="space-y-8 max-w-3xl mx-auto">
-          
-            <h2 className="text-xl font-semibold mb-3 text-[#6b4423]">
-              1. To blaspheme the devotees who have dedicated their lives
-              for propagating the holy name of the Lord.
-            </h2>
-           
-          
-
-          <div>
-            <h2 className="text-xl font-semibold mb-3 text-[#6b4423]">
-              2.To consider the names of demigods like Lord Śiva or Lord Brahmā to
-              be equal to or independent of the name of Lord Viṣṇu.
-            </h2>
-            
+        <div className="space-y-8 max-w-3xl mx-auto text-left">
+          <div className="pb-6 border-b-2 border-[#c9a66b]">
+            <p
+              data-verse
+              onClick={() => setSelected(selected === "o1" ? null : "o1")}
+              className={`text-xl font-semibold text-[#6b4423] pl-6 ${
+                selected === "o1" ? "border-l-4 border-[#da9d5b] -ml-1" : ""
+              }`}
+            >
+              <span className="inline-block w-12">(1)</span>To blaspheme the devotees who have dedicated their lives for propagating the holy name of the Lord.
+            </p>
           </div>
 
-          <div>
-            <h2 className="text-xl font-semibold mb-3 text-[#6b4423]">
-              3.  To disobey the orders of the spiritual master.
-            </h2>
-          
+          <div className="pb-6 border-b-2 border-[#c9a66b]">
+            <p
+              data-verse
+              onClick={() => setSelected(selected === "o2" ? null : "o2")}
+              className={`text-xl font-semibold text-[#6b4423] pl-6 ${
+                selected === "o2" ? "border-l-4 border-[#da9d5b] -ml-1" : ""
+              }`}
+            >
+              <span className="inline-block w-12 mr-2">2.</span>To consider the names of demigods like Lord Śiva or Lord Brahmā to be equal to or independent of the name of Lord Viṣṇu.
+            </p>
           </div>
 
-          <div>
-            <h2 className="text-xl font-semibold mb-3 text-[#6b4423]">
-              4. To blaspheme the Vedic literature or literature in pursuance of
-              the Vedic version.
-            </h2>
-            
+          <div className="pb-6 border-b-2 border-[#c9a66b]">
+            <p
+              data-verse
+              onClick={() => setSelected(selected === "o3" ? null : "o3")}
+              className={`text-xl font-semibold text-[#6b4423] pl-6 ${
+                selected === "o3" ? "border-l-4 border-[#da9d5b] -ml-1" : ""
+              }`}
+            >
+              <span className="inline-block w-12 mr-2">3.</span>To disobey the orders of the spiritual master.
+            </p>
           </div>
 
-          <div>
-            <h2 className="text-xl font-semibold mb-3 text-[#6b4423]">
-              5. To consider the glories of chanting Hare Kṛṣṇa to be an imagination.
-            </h2>
-            
+          <div className="pb-6 border-b-2 border-[#c9a66b]">
+            <p
+              data-verse
+              onClick={() => setSelected(selected === "o4" ? null : "o4")}
+              className={`text-xl font-semibold text-[#6b4423] pl-6 ${
+                selected === "o4" ? "border-l-4 border-[#da9d5b] -ml-1" : ""
+              }`}
+            >
+              <span className="inline-block w-12 mr-2">4.</span>To blaspheme the Vedic literature or literature in pursuance of the Vedic version.
+            </p>
           </div>
 
-          <div>
-            <h2 className="text-xl font-semibold mb-3 text-[#6b4423]">
-              6. Giving some interpretation to the holy name of the lord.
-            </h2>
-            
+          <div className="pb-6 border-b-2 border-[#c9a66b]">
+            <p
+              data-verse
+              onClick={() => setSelected(selected === "o5" ? null : "o5")}
+              className={`text-xl font-semibold text-[#6b4423] pl-6 ${
+                selected === "o5" ? "border-l-4 border-[#da9d5b] -ml-1" : ""
+              }`}
+            >
+              <span className="inline-block w-12 mr-2">5.</span>To consider the glories of chanting Hare Kṛṣṇa to be an imagination.
+            </p>
           </div>
 
-          <div>
-            <h2 className="text-xl font-semibold mb-3 text-[#6b4423]">
-              7. Committing sinful activities on the strength of chanting
-            </h2>
-            
+          <div className="pb-6 border-b-2 border-[#c9a66b]">
+            <p
+              data-verse
+              onClick={() => setSelected(selected === "o6" ? null : "o6")}
+              className={`text-xl font-semibold text-[#6b4423] pl-6 ${
+                selected === "o6" ? "border-l-4 border-[#da9d5b] -ml-1" : ""
+              }`}
+            >
+              <span className="inline-block w-12 mr-2">6.</span>Giving some interpretation to the holy name of the lord.
+            </p>
           </div>
 
-          <div>
-            <h2 className="text-xl font-semibold mb-3 text-[#6b4423]">
-              8.  To consider the chanting of Hare Kṛṣṇa to be one of the auspicious
-              ritualistic activities offered in the Vedas as fruitive activities
-              (karma-kāṇḍa).
-            </h2>
-            
+          <div className="pb-6 border-b-2 border-[#c9a66b]">
+            <p
+              data-verse
+              onClick={() => setSelected(selected === "o7" ? null : "o7")}
+              className={`text-xl font-semibold text-[#6b4423] pl-6 ${
+                selected === "o7" ? "border-l-4 border-[#da9d5b] -ml-1" : ""
+              }`}
+            >
+              <span className="inline-block w-12 mr-2">7.</span>Committing sinful activities on the strength of chanting
+            </p>
           </div>
 
-          <div>
-            <h2 className="text-xl font-semibold mb-3 text-[#6b4423]">
-              9.  To instruct a faithless person about the glories of the holy name.
-            </h2>
-            
+          <div className="pb-6 border-b-2 border-[#c9a66b]">
+            <p
+              data-verse
+              onClick={() => setSelected(selected === "o8" ? null : "o8")}
+              className={`text-xl font-semibold text-[#6b4423] pl-6 ${
+                selected === "o8" ? "border-l-4 border-[#da9d5b] -ml-1" : ""
+              }`}
+            >
+              <span className="inline-block w-12 mr-2">8.</span>To consider the chanting of Hare Kṛṣṇa to be one of the auspicious ritualistic activities offered in the Vedas as fruitive activities (karma-kāṇḍa).
+            </p>
           </div>
 
-          <div>
-            <h2 className="text-xl font-semibold mb-3 text-[#6b4423]">
-              10. To not have complete faith in the chanting of the holy names and
-              to maintain material attachments, even after understanding so many
-              instructions on this matter.
-              <p>It is also an offense to be inattentive while chanting.</p>
-            </h2>
-            
+          <div className="pb-6 border-b-2 border-[#c9a66b]">
+            <p
+              data-verse
+              onClick={() => setSelected(selected === "o9" ? null : "o9")}
+              className={`text-xl font-semibold text-[#6b4423] pl-6 ${
+                selected === "o9" ? "border-l-4 border-[#da9d5b] -ml-1" : ""
+              }`}
+            >
+              <span className="inline-block w-12 mr-2">9.</span>To instruct a faithless person about the glories of the holy name.
+            </p>
+          </div>
+
+          <div className="pb-6 border-b-2 border-[#c9a66b]">
+            <p
+              data-verse
+              onClick={() => setSelected(selected === "o10" ? null : "o10")}
+              className={`text-xl font-semibold text-[#6b4423] pl-6 ${
+                selected === "o10" ? "border-l-4 border-[#da9d5b] -ml-1" : ""
+              }`}
+            >
+              <span className="inline-block w-12 mr-2">10.</span>To not have complete faith in the chanting of the holy names and to maintain material attachments, even after understanding so many instructions on this matter. It is also an offense to be inattentive while chanting.
+            </p>
           </div>
 
           <div className="mt-12 p-6 bg-[#f5dcc4]/60 border border-[#d4a574] rounded-lg">
