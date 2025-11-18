@@ -816,11 +816,11 @@ export default function Home() {
             <p
               data-verse
               onClick={() => setSelected(selected === "o1" ? null : "o1")}
-              className={`text-sm sm:text-base md:text-lg font-semibold text-[#6b4423] pl-3 sm:pl-6 ${
+              className={`text-sm sm:text-base md:text-lg font-semibold text-[#ac3f2f] pl-3 sm:pl-6 ${
                 selected === "o1" ? "border-l-4 border-[#da9d5b] -ml-1" : ""
               }`}
             >
-              <span className="inline-block w-12">(1)</span>To blaspheme the devotees who have dedicated their lives for <br/> propagating the holy name of the Lord.
+              <span className="inline-block w-12">(1)</span>To blaspheme the devotees who have dedicated their lives for <br/> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; propagating the holy name of the Lord.
             </p>
           </div>
 
@@ -828,11 +828,11 @@ export default function Home() {
             <p 
               data-verse
               onClick={() => setSelected(selected === "o2" ? null : "o2")}
-              className={`text-sm sm:text-base md:text-lg font-semibold text-[#6b4423] pl-3 sm:pl-6 ${
+              className={`text-sm sm:text-base md:text-lg font-semibold text-[#ac3f2f] pl-3 sm:pl-6 ${
                 selected === "o2" ? "border-l-4 border-[#da9d5b] -ml-1" : ""
               }`}
             >
-              <span className="inline-block w-12">(2)</span>To consider the names of demigods like Lord Śiva or Lord Brahmā <br/>to be equal to or independent of the name of Lord Viṣṇu.
+              <span className="inline-block w-12">(2)</span>To consider the names of demigods like Lord Śiva or Lord Brahmā <br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; to be equal to or independent of the name of Lord Viṣṇu.
             </p>
           </div>
 
@@ -840,7 +840,7 @@ export default function Home() {
             <p
               data-verse
               onClick={() => setSelected(selected === "o3" ? null : "o3")}
-              className={`text-sm sm:text-base md:text-lg font-semibold text-[#6b4423] pl-3 sm:pl-6 ${
+              className={`text-sm sm:text-base md:text-lg font-semibold text-[#ac3f2f] pl-3 sm:pl-6 ${
                 selected === "o3" ? "border-l-4 border-[#da9d5b] -ml-1" : ""
               }`}
             >
@@ -852,11 +852,11 @@ export default function Home() {
             <p
               data-verse
               onClick={() => setSelected(selected === "o4" ? null : "o4")}
-              className={`text-sm sm:text-base md:text-lg font-semibold text-[#6b4423] pl-3 sm:pl-6 ${
+              className={`text-sm sm:text-base md:text-lg font-semibold text-[#ac3f2f] pl-3 sm:pl-6 ${
                 selected === "o4" ? "border-l-4 border-[#da9d5b] -ml-1" : ""
               }`}
             >
-              <span className="inline-block w-12">(4)</span>To blaspheme the Vedic literature or literature in pursuance <br/> of the Vedic version.
+              <span className="inline-block w-12">(4)</span>To blaspheme the Vedic literature or literature in pursuance <br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  of the Vedic version.
             </p>
           </div>
 
@@ -864,7 +864,7 @@ export default function Home() {
             <p
               data-verse
               onClick={() => setSelected(selected === "o5" ? null : "o5")}
-              className={`text-sm sm:text-base md:text-lg font-semibold text-[#6b4423] pl-3 sm:pl-6 ${
+              className={`text-sm sm:text-base md:text-lg font-semibold text-[#ac3f2f] pl-3 sm:pl-6 ${
                 selected === "o5" ? "border-l-4 border-[#da9d5b] -ml-1" : ""
               }`}
             >
@@ -876,7 +876,7 @@ export default function Home() {
             <p
               data-verse
               onClick={() => setSelected(selected === "o6" ? null : "o6")}
-              className={`text-sm sm:text-base md:text-lg font-semibold text-[#6b4423] pl-3 sm:pl-6 ${
+              className={`text-sm sm:text-base md:text-lg font-semibold text-[#ac3f2f] pl-3 sm:pl-6 ${
                 selected === "o6" ? "border-l-4 border-[#da9d5b] -ml-1" : ""
               }`}
             >
@@ -888,7 +888,7 @@ export default function Home() {
             <p
               data-verse
               onClick={() => setSelected(selected === "o7" ? null : "o7")}
-              className={`text-sm sm:text-base md:text-lg font-semibold text-[#6b4423] pl-3 sm:pl-6 ${
+              className={`text-sm sm:text-base md:text-lg font-semibold text-[#ac3f2f] pl-3 sm:pl-6 ${
                 selected === "o7" ? "border-l-4 border-[#da9d5b] -ml-1" : ""
               }`}
             >
@@ -900,11 +900,11 @@ export default function Home() {
             <p
               data-verse
               onClick={() => setSelected(selected === "o8" ? null : "o8")}
-              className={`text-sm sm:text-base md:text-lg font-semibold text-[#6b4423] pl-3 sm:pl-6 ${
+              className={`text-sm sm:text-base md:text-lg font-semibold text-[#ac3f2f] pl-3 sm:pl-6 ${
                 selected === "o8" ? "border-l-4 border-[#da9d5b] -ml-1" : ""
               }`}
             >
-              <span className="inline-block w-12">(8)</span>To consider the chanting of Hare Kṛṣṇa to be one of the auspicious ritualistic activities offered in the Vedas as fruitive activities (karma-kāṇḍa).
+              <span className="inline-block w-12">(8)</span>To consider the chanting of Hare Kṛṣṇa to be one of the auspicious  <br/> &nbsp; &nbsp; &nbsp; &nbsp; ritualistic activities offered in the Vedas as fruitive activities (karma-kāṇḍa).
             </p>
           </div>
 
@@ -912,7 +912,7 @@ export default function Home() {
             <p
               data-verse
               onClick={() => setSelected(selected === "o9" ? null : "o9")}
-              className={`text-sm sm:text-base md:text-lg font-semibold text-[#6b4423] pl-3 sm:pl-6 ${
+              className={`text-sm sm:text-base md:text-lg font-semibold text-[#ac3f2f] pl-3 sm:pl-6 ${
                 selected === "o9" ? "border-l-4 border-[#da9d5b] -ml-1" : ""
               }`}
             >
@@ -924,11 +924,11 @@ export default function Home() {
             <p
               data-verse
               onClick={() => setSelected(selected === "o10" ? null : "o10")}
-              className={`text-sm sm:text-base md:text-lg font-semibold text-[#6b4423] pl-3 sm:pl-6 ${
+              className={`text-sm sm:text-base md:text-lg font-semibold text-[#ac3f2f] pl-3 sm:pl-6 ${
                 selected === "o10" ? "border-l-4 border-[#da9d5b] -ml-1" : ""
               }`}
             >
-              <span className="inline-block w-12">(10)</span>To not have complete faith in the chanting of the holy names and to maintain material attachments, even after understanding so many instructions on this matter. <br/> <br/> *It is also an offense to be inattentive while chanting. 
+              <span className="inline-block w-12">(10)</span>To not have complete faith in the chanting of the holy names and <br/>&nbsp; &nbsp; &nbsp; &nbsp; to maintain material attachments, even after understanding so many <br/> &nbsp; &nbsp; &nbsp; &nbsp;  instructions on this matter. <br/> <br/> *It is also an offense to be inattentive while chanting. 
             </p>
           </div>
 
