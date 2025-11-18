@@ -489,7 +489,7 @@ export default function Home() {
             <p
               data-verse
               onClick={() => setSelected(selected === "st1" ? null : "st1")}
-              className={`text-sm sm:text-base md:text-lg text-black max-w-3xl mx-auto relative ${
+              className={`text-xl text-black max-w-3xl mx-auto relative ${
                 selected === "st1"
                   ? "before:absolute before:-left-4 before:top-0 before:bottom-0 before:w-1 before:bg-[#da9d5b]"
                   : ""
