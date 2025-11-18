@@ -939,11 +939,17 @@ export default function Home() {
           </div>
         </div>
 
-<h3 className="mt-4  text-lg sm:text-xl md:text-xl font-bold mb-2 sm:mb-4 text-[#5a3a1a] inline-block border-b-4 border-[#da9d5b] pb-2">
+<h2 className="mt-4  text-lg sm:text-xl md:text-xl font-bold mb-2 sm:mb-4 text-[#5a3a1a] inline-block border-b-4 border-[#da9d5b] pb-2">
           Śrī Vaiṣṇava praṇāma
-        </h3>
+        </h2>
 
-<p className="">    
+<p
+              data-verse
+              onClick={() => setSelected(selected === "o11" ? null : "o11")}
+              className={`text-default text-[#1c1814] pl-3 sm:pl-6 ${
+                selected === "o11" ? "border-l-4 border-[#da9d5b] -ml-1" : ""
+              }`}
+>    
  <b>
  vāñchā-kalpa-tarubhyaś ca
               <br />
@@ -956,8 +962,8 @@ export default function Home() {
   
   {/* Dedicated invisible spacer span */}
   <span className="small-gap" /> 
-</p>
- Now, let us offer our humble obeisances unto all the Vaiṣṇava devotees of the Lord, <br/> who are just like wish-fulfilling desire trees, and are full of compassion for the fallen souls.
+
+ Now, let us offer our humble obeisances unto all the Vaiṣṇava devotees of the Lord, <br/> who are just like wish-fulfilling desire trees, and are full of compassion for the fallen souls.</p>
       </section>
     </>
   );
