@@ -15,7 +15,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Sidebar />
-        <main className="ml-56 px-12 py-4 leading-relaxed">
+        <main className="ml-0 sm:ml-56 px-4 sm:px-8 md:px-12 py-4 leading-relaxed">
           {children}
         </main>
       </body>
